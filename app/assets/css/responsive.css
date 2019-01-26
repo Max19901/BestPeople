@@ -1,0 +1,259 @@
+/* Extra small devices (phones, less than 768px) */
+@media (max-width : 766px) {
+	/*home-carousel*/
+	.trendy-slider .controls li{
+		padding:30px 10px;
+	}
+	.trendy-slider .controls li span{
+		display:none;
+	}
+	.trendy-slider .carousel-caption {
+	  margin-top: -80px;
+	}
+	.trendy-slider .carousel-caption h1 {
+	  font-size: 22px;
+	  line-height: 35px;
+	  letter-spacing: 0px;
+	  margin-bottom: 0;	
+	}
+	.trendy-slider .carousel-caption p {
+	  font-size: 10px;
+	  margin-bottom: 15px;
+	}
+	.trendy-slider .carousel-caption .btn {
+	  font-size: 14px;
+	  padding: 10px 30px;
+	}
+
+
+	/* === Creative Section === */
+	.mac-screenshot img,
+	.responsive-screenshot img{
+		margin: 0 auto;
+	}
+
+
+
+	/* === SERVICE SECTION === */
+	.service-tab li > a{
+		padding: 20px 10px;
+	}
+
+	.service-tab li span{
+		display: none;
+	}
+
+	/* === PORTFOLIO SECTION === */
+	.nav-tabs.nav-justified>li{
+		display: table-cell;
+		width: 1%;
+	}
+
+	/*About us section*/
+	.creative-skills {
+		margin-bottom: 30px;
+	}
+
+	/*process-box */
+	.process-box {
+	  margin-bottom: 30px;
+	}
+	/*quote-carousel*/
+	#quote-carousel .carousel-indicators {
+	  bottom: -45px;
+	  left: 40%;
+	  width: 90%;
+	  margin-left: -35%;
+	}
+	#quote-carousel .carousel-control {
+	  bottom: 0;
+	}
+	#quote-carousel .carousel-control.left {
+	  left: 0;
+	}
+	#quote-carousel .carousel-control.right {
+	  right: 0;
+	}
+	/*case-study*/
+	.case-study-left {
+	  padding: 60px 25px 60px 25px;
+	}
+	.case-study-right {
+	  padding: 60px 25px 60px 25px;
+	}
+	/*contact-section*/
+	.contact-section .btn {
+	  min-width: 260px;
+	}
+	.social-icon li {
+		margin-bottom: 10px;
+	}
+
+
+	/* === SERVICES SECTION === */
+	.sbox-gutter {
+	    border: 0;
+	}
+
+	/* === about-section === */
+	.video-wrap iframe {
+	  height: 160px;
+	  margin-top: 20px;
+	}
+
+}
+
+/* Landscape Mobile */
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+
+	/* === HOME CAROUSEL === */
+	.trendy-slider .controls li{
+		padding:30px 10px;
+	}
+	.trendy-slider .controls li span{
+		font-size: 14px;
+		display:block;
+	}
+	.trendy-slider .carousel-caption {
+	  margin-top: -95px;
+	}
+	.trendy-slider .carousel-caption h1 {
+	  font-size: 33px;
+	  line-height: 56px;
+	}
+	.trendy-slider .carousel-caption p {
+	  font-size: 14px;
+	  margin-bottom: 25px;
+	}
+
+	/* === SERVICE SECTION === */
+	.service-tab li > a{
+		padding: 20px 10px;
+		font-size: 14px;
+	}
+
+	.service-tab li span{
+		display: block;
+	}
+
+	/* === PORTFOLIO SECTION === */
+	.nav-tabs.nav-justified>li{
+		display: table-cell;
+		width: 1%;
+	}
+
+
+	/* === about-section === */
+	.video-wrap iframe {
+	  height: 330px;
+	}
+
+
+
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width : 768px) and (max-width : 991px) {
+
+	/*navbar*/
+	.navbar-default .navbar-nav>li>a {
+	  padding: 40px 12px;
+	}
+	.navbar-default.sticky .navbar-nav>li>a {
+	  padding: 20px 12px;
+	}
+
+
+	/*home-carousel*/
+	.trendy-slider .controls li{
+		padding:30px 10px;
+	}
+	.trendy-slider .carousel-caption {
+	  margin-top: -142px;
+	}
+	.trendy-slider .carousel-caption h1 {
+	  font-size: 60px;
+	  line-height: 44px;
+	  letter-spacing: -3px;
+	  margin-bottom: 30px;
+	}
+
+	/* === feature-section === */
+	.feature-section .media{
+		margin:0 0 40px;
+	}
+
+
+	/* === about-section === */
+	.creative-skills {
+		margin-bottom: 30px;
+	}
+	.video-wrap iframe {
+	  height: 200px;
+	}
+
+	/* === SERVICES SECTION === */
+	.sbox-gutter:nth-child(2),
+	.sbox-gutter:nth-child(4),
+	.sbox-gutter:nth-child(6) {
+	    border-right: 0;
+	}
+	.sbox-gutter:nth-child(3) {
+		border-right: 1px solid #dedede;
+	}
+	.sbox-gutter:nth-child(4) {
+		border-bottom: 1px solid #dedede;
+	}
+
+
+	/*process-box */
+	.process-box {
+	  margin-bottom: 30px;
+	}
+
+	/*quote-carousel*/
+	#quote-carousel .carousel-indicators {
+	  bottom: -45px;
+	}
+	#quote-carousel .carousel-control {
+	  bottom: 0px;
+	}
+
+
+	/*case-study*/
+	.case-study-left {
+	  padding: 60px 25px 60px 25px;
+	}
+	.case-study-right {
+	  padding: 60px 25px 60px 25px;
+	}
+}
+
+
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width : 992px) and (max-width : 1199px) {
+
+	/* === about-section === */
+	.video-wrap iframe {
+	  height: 260px;
+	}
+
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width : 1200px) and (max-width : 1280px) {
+
+
+}
+
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width : 1920px) {
+
+
+}

@@ -1,0 +1,352 @@
+// width 1200px
+@media (max-width: 1200px)
+	nav
+		.container
+			width: 100%
+		.navbar .navbar-collapse
+			padding: 0
+	.client-slider-v1-wrapper
+		.container
+			width: 100%
+	.feedback-wrap__item .item
+		padding-top: 20px
+	img.img-responsive
+		position: static
+	.service-tab li a span
+		font-size: 14px
+// ----
+
+// width 992px
+
+@media (max-width: 1004px)
+	.container
+		width: 100%
+	#custom-collapse
+		display: none
+	.mbl-hamburger
+		.hamburger-box
+			width: 40px
+			height: 25px
+			position: relative
+			top: 40px
+			.hamburger-inner
+				position: absolute
+				width: 40px
+				height: 4px
+				transition-timing-function: ease
+				transition-duration: .15s
+				transition-property: transform
+				border-radius: 4px
+				background-color: $red
+				transition-timing-function: cubic-bezier(.55,.055,.675,.19)
+				transition-duration: 75ms
+				top: 10px
+				&:after,&:before
+					content: ''
+					display: block
+					position: absolute
+					width: 40px
+					height: 4px
+					transition-timing-function: ease
+					transition-duration: .15s
+					transition-property: transform
+					border-radius: 4px
+					background-color: $red
+					transition-timing-function: cubic-bezier(.55,.055,.675,.19)
+					transition-duration: 75ms
+					top: 10px
+				&:before
+					top: -10px
+			&.on
+				.hamburger-inner
+					transition-delay: .12s
+					transition-timing-function: cubic-bezier(.215,.61,.355,1)
+					transform: rotate(45deg)
+					&:before
+						top: 0
+						transition: top 75ms ease,opacity 75ms ease .12s
+						opacity: 0
+					&:after
+						top: 0
+						bottom: 0
+						transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) .12s
+						transform: rotate(-90deg)
+	.navbar .container:before,.navbar .container:after,.navbar:before,.navbar:after
+		display: none
+	.navbar
+		position: fixed
+		z-index: 2
+		width: 100%
+		height: 100px
+		z-index: 1000
+		-webkit-transition: height 0.4s ease
+		-moz-transition: height 0.4s ease
+		transition: height 0.4s ease
+		.navbar-header
+			width: 300px
+	#client-slider-v1 .carousel-control.left
+		left: 20%
+	#client-slider-v1 .carousel-control.right
+		right: 20%
+	#client-slider-v1 .carousel-indicators
+		bottom: -40px
+	#client-slider-v1 .carousel-control
+		bottom: -5px
+	.service-tab li a span
+		font-size: 10px
+		padding-top: 20px
+	.section-padding
+		padding:  50px 0
+	.all-candidate
+		margin-top: 50px
+	.all-vacancies
+		margin-top: 50px
+	form#contactForm
+		margin-bottom: 50px
+	section#home
+		padding-top: 100px
+	#services .row-content
+		display: block
+	.sbox-gutter
+		width: 100%
+	.service-contain
+		.tab-content
+			padding: 0 15px 
+
+@media (max-width: 991px)
+	.candidate-wrap
+		display: block
+	.candidate-wrap__item
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+	.candidate-wrap__item .description-wrap
+		margin-top: 0
+		h3
+			margin-top: 20px
+			font-size: 18px
+		.mbl-button
+			display: inline-block
+			position: static
+			transform: translate(0)
+			margin-top: 40px
+			width: 165px
+	.candidate-wrap__item .button
+		display: none
+	.mbl-butoon
+		display: block
+	.news-list__aside
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+	.news-list__aside-wrap
+		width: 32%
+	.contact-info
+		margin-top: 0
+
+
+//  width 860px
+@media (max-width: 860px)
+	.register-wrap
+		height: 800px
+	.register-wrap__login, .register-wrap__register
+		flex-direction: column
+		bottom: auto
+		.form-wrap
+			width: 100%
+		.description-wrap
+			margin-top: 40px
+			width: 100%
+			padding: 0
+			.description-item
+				background-repeat: no-repeat
+				background-size: cover
+				backgroun-position:center top
+				height: 365px
+	.register-wrap__register
+		flex-direction: column-reverse
+	.title-wrap
+		flex-direction: column
+		h3
+			margin-left: 0
+			margin-top: 10px
+
+//  width 768px
+@media (max-width: 768px)
+	.navbar-custom li a
+		border: none
+	.content-tabs
+		margin-bottom: 30px
+	.problems-wrap
+		display: block
+		.problems-item
+			display: inline-block
+			width: 49%
+			vertical-align: top
+			&:last-child
+				width: 100%
+	.choice-wrap.company
+		&:before
+			display: none
+	.top-vacancies .topVacancies__wrap
+		flex-direction: column
+		align-items: center
+		&:after
+			display: none
+		&__description
+			width: 100%
+			padding: 0
+		&__image
+			width: 100%
+			.title-company
+				width: 100%
+				display: flex
+				justify-content: space-around
+				align-items: baseline
+				height: 100px
+				h2
+					padding: 0
+					margin: 0
+	.top-vacancies .topVacancies__wrap__image .image
+		display: none
+	.blog-wrap__block
+		flex-basis: 100%
+		&:first-child .blog-meta
+			flex-direction: column
+			.tags
+				margin-left: 0
+	.blog-wrap__description h2
+		font-size: 25px
+	.form-register .form-item .contact-info .input-wrap
+		width: 100%
+// width 700px
+@media (max-width: 700px)
+	.feedback-wrap__item .item
+		opacity: 1;
+		padding-top: 30px
+	.form-register .form-item .check-box
+		flex-wrap: wrap
+
+//  width 600px
+@media (max-width: 600px)
+	.service-tab li a span
+		display: none
+	.service-tab li a
+		padding-top: 40px
+	#client-slider-v1 .carousel-control.right
+		right: 5%
+	#client-slider-v1 .carousel-control.left
+		left: 5%
+	.register-wrap__nav nav ul li a
+		font-size: 20px
+	.topCandidate-wrap
+		flex-direction: column
+		align-items: center
+		&__image
+			width: 200px
+			height: 200px
+		&__description
+			text-align: center
+	.form-register .form-item .input-wrap.check-item
+		width: 100%
+
+
+@media (max-width: 485px)
+	.vacancies-wrap .vacancies-item
+		flex-direction: column
+	.vacancies-wrap .vacancies-item .description-wrap
+		width: 100%
+	.vacancies-wrap .vacancies-item .image-wrap
+		width: 100%
+	.vacancies-wrap
+		padding-top: 0
+	.candidate-wrap__item
+		flex-direction: column
+	#client-slider-v1
+		padding-bottom: 90px
+	.register-wrap__nav nav ul li a
+		font-size: 15px
+	.register-wrap__nav nav ul li
+		padding-left: 0
+	.register-wrap
+		height: 880px
+	.register-wrap__login .description-wrap .description-item, .register-wrap__register .description-wrap .description-item
+		min-height: 350px
+		height: auto
+		background-position: center
+	.choice-wrap
+		p
+			line-height: 18px
+		&:hover
+			.choice-item
+				h2
+					transform: translateY(-90px)
+				p
+					transform: translateY(-65px)
+	.news-list__block-wrap
+		width: 100%
+	.news-list__aside
+		flex-wrap: wrap
+	.news-list__aside-wrap
+		width: 100%
+	.news-list__aside-wrap a .news-list__aside-description p
+		font-family: prof
+		font-size: 14px
+		line-height: 18px
+		height: 72px
+		overflow: hidden
+		color: #000
+	.mbl-container
+		width: 105%
+	.blog-wrap__block a .blog-title
+		padding: 20px
+		font-size: 25px
+	.blog .blog-meta
+		padding: 0 20px
+		margin-top: 0
+	.popup-form
+		width: 320px
+	.form-register .form-item .input-wrap
+		margin: 0
+	.form-container .steps ul
+		flex-wrap: wrap
+		li
+			width: 100%
+	.form-container .steps ul li
+		border: 1px solid $red
+		border-top: none
+		&.current
+			border: 1px solid $red
+			border-bottom: 1px solid #fff
+			
+@media (max-width: 375px)
+	.navbar .navbar-header .navbar-tel
+		display: none
+	.search form
+		flex-direction: column
+		input
+			width: 100%
+		.button
+			margin-left: 0
+			margin: 0 auto
+			margin-top: 20px			
+	.top-vacancies .topVacancies__wrap__image .title-company
+		display: block
+	.feedback-wrap__item 
+		padding: 10px
+		.item
+			padding-top: 10px
+	.case-study-left, .case-study-right
+		padding: 60px 25px 60px 25px
+	.pagination ul
+		flex-wrap: wrap
+	.pagination ul li
+		margin: 0 10px
+		margin-bottom: 10px
+	.news-title h3
+		font-size: 26px

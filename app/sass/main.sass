@@ -1,0 +1,2138 @@
+// Fonts
+@font-face
+	font-family: prof; /* Имя шрифта */
+	src: url('../fonts/PFDinDisplayPro-Reg.ttf'); /* Путь к файлу со шрифтом */
+
+
+*,
+	padding: 0
+	margin: 0
+	outline: none
+	font-family: prof
+
+h1,h2,h3,h4,h5,p,a,span,b,i
+	font-family: prof 
+
+.mbl-button
+	display: none
+
+// Variable
+$red: #e52324
+$grey: #aeb4c1
+
+// preloader
+#preloader 
+	position: fixed
+	width: 100%
+	height: 100%
+	perspective: 780px
+	display: block
+// Popup
+.popup
+	width: 100%
+	height: 100%
+	position: fixed
+	background: rgba(0,0,0,.7)
+	z-index: 9999
+	transform: translateY(-100%)
+	transition: .3s
+	top: 0
+	opacity: 0
+	left: 0
+	&.active
+		transform: translateY(0)
+		opacity: 1
+	&-form
+		background: #fff
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
+		padding: 20px
+		width: 350px
+		min-height: 450px
+		h3
+			text-align: center
+			color: $red
+			margin-bottom: 30px
+		form
+			margin-top: 0
+			input
+				width: 100%
+				margin-bottom: 40px
+				padding-left: 10px
+				border: none
+				height: 34px
+				border: 1px solid #dcdcdc
+				transition: .3s
+.popup-close
+	position: absolute
+	right: 5px
+	cursor: pointer
+	top: 5px
+	width: 30px
+	height: 30px
+	span
+		width: 30px
+		height: 2px
+		top: 14px
+		background: #000
+		position: relative
+		display: block
+		transform: rotate(45deg)
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			width: 30px
+			height: 2px
+			background: #000
+			transform: rotate(-90deg)
+.loader
+	position: relative
+	top: 50%
+	left: 50%
+	display: block
+	width: 100px
+	height: 100px
+	transform: translate(-50%,-50%)
+
+.cssload-inner 
+	position: absolute
+	width: 100px
+	height: 100px
+	box-sizing: border-box
+	-o-box-sizing: border-box
+	-ms-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	border-radius: 50%
+	-o-border-radius: 50%
+	-ms-border-radius: 50%
+	-webkit-border-radius: 50%
+	-moz-border-radius: 50%
+	&.cssload-one 
+		left: 0
+		top: 0
+		animation: cssload-rotate-one 1.15s linear infinite
+		-o-animation: cssload-rotate-one 1.15s linear infinite
+		-ms-animation: cssload-rotate-one 1.15s linear infinite
+		-webkit-animation: cssload-rotate-one 1.15s linear infinite
+		-moz-animation: cssload-rotate-one 1.15s linear infinite
+		border-bottom: 3px solid $red
+		transform: translate(-50%,-50%)
+	&.cssload-two
+		left: 0
+		top: 0
+		animation: cssload-rotate-two 1.15s linear infinite
+		-o-animation: cssload-rotate-two 1.15s linear infinite
+		-ms-animation: cssload-rotate-two 1.15s linear infinite
+		-webkit-animation: cssload-rotate-two 1.15s linear infinite
+		-moz-animation: cssload-rotate-two 1.15s linear infinite
+		border-right: 3px solid $red
+		transform: translate(-50%,-50%)
+	&.cssload-three 
+		left: 
+		top: 0
+		animation: cssload-rotate-three 1.15s linear infinite
+		-o-animation: cssload-rotate-three 1.15s linear infinite
+		-ms-animation: cssload-rotate-three 1.15s linear infinite
+		-webkit-animation: cssload-rotate-three 1.15s linear infinite
+		-moz-animation: cssload-rotate-three 1.15s linear infinite
+		border-top: 3px solid $red
+		transform: translate(-50%,-50%)
+
+@keyframes cssload-rotate-one 
+	0% 
+		transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg)
+	
+	100% 
+		transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+
+@-o-keyframes cssload-rotate-one 
+	0% 
+		-o-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg)
+	100% 
+		-o-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+
+@-ms-keyframes cssload-rotate-one 
+	0% 
+		-ms-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg)
+	100% 
+		-ms-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+
+@-webkit-keyframes cssload-rotate-one 
+	0% 
+		-webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg)
+	
+	100% 
+		-webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+
+@-moz-keyframes cssload-rotate-one 
+	0% 
+		-moz-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg)
+	
+	100% 
+		-moz-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+	
+@keyframes cssload-rotate-two 
+	0% 
+		transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg)
+	
+	100% 
+		transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg)
+	
+
+
+@-o-keyframes cssload-rotate-two 
+	0% 
+		-o-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg)
+	
+	100% 
+		-o-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg)
+	
+
+@-ms-keyframes cssload-rotate-two 
+	0% 
+		-ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg)
+	
+	100% 
+		-ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg)
+	
+
+@-webkit-keyframes cssload-rotate-two 
+	0% 
+		-webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg)
+	
+	100% 
+		-webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg)
+	
+
+@-moz-keyframes cssload-rotate-two 
+	0% 
+		-moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg)
+	
+	100% 
+		-moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg)
+	
+
+
+@keyframes cssload-rotate-three 
+	0% 
+		transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg)
+	
+	100% 
+		transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg)
+	
+
+@-o-keyframes cssload-rotate-three
+	0%
+		-o-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg)
+	100% 
+		-o-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg)
+
+@-ms-keyframes cssload-rotate-three 
+	0%
+		-ms-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg)
+	100% 
+		-ms-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg)
+
+@-webkit-keyframes cssload-rotate-three 
+	0% 
+		-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg)
+	
+	100% 
+		-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg)
+
+
+
+@-moz-keyframes cssload-rotate-three 
+	0% 
+		-moz-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg)
+
+	100% 
+		-moz-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg)
+
+
+
+img.img-responsive
+	position: relative
+	top: -100px
+section
+ 	overflow: hidden
+.mbl-menu
+	display: none
+.button
+	min-width: 100px
+	height: 30px
+	background: none
+	border: none
+	background: $red
+	color: #fff
+	border: 1px solid $red
+	position: relative
+	transition: .3s
+	span
+		position: absolute
+		z-index: 2
+		top: 50%
+		left: 56%
+		transform: translate(-50%,-50%)
+		font-weight: 600
+		&:after
+			content: "\f090"
+			font-family: "FontAwesome"
+			position: absolute
+			top: 50%
+			left: -20px
+			transform: translate(0,-50%)
+	&:hover
+		color: $red
+		background: #fff
+.learnmore-btn
+	border-radius: 0
+// New Style
+.carousel-fade .carousel-inner .item:after
+	backfround: rgba(0,0,0,.5)
+.section-title
+	text-transform: capitalize
+	font-weight: 700
+	margin-bottom: 45px
+	position: relative
+	text-transform: uppercase
+// Header
+.navbar
+	position: fixed
+	box-shadow: 0 2px 5px rgba(0,0,0,0.35)
+	.navbar-header
+		position: relative
+		width: 275px
+		.navbar-tel
+			font-size: 16px
+			display: inline-block
+			margin-top: 35px
+			color: #333
+			font-weight: bold
+	.navigation
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		width: 100%
+		li
+			display: inline-block
+			margin: 0
+			a
+				position: relative
+				display: block
+				&:after
+					content: ''
+					left: 50%
+					transform: translate(-50%,0)
+					width: 0
+					height: 2px
+					background: $red
+					display: block
+					position: absolute
+					bottom: 0
+					transition: .3s
+				&:hover
+					&:after
+						width: 100%
+				&.active
+					color: $red
+					&:after
+						width: 100%
+	.language
+		margin-left: 20px
+		font-size: 12px
+		color: $red
+		button
+			position: relative
+			background: none
+			border: none
+			.caret
+				position: absolute
+				top: 13px
+				right: -15px
+	.dropdown-menu
+		li
+			a
+				padding: 0
+				display: inline-block
+				&:hover
+					padding: 0
+	.navbar-collapse
+		width: calc(100% - 275px)
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&:before
+			display: none
+	.container
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+.enter-button
+	.button
+		display: block
+.submenu
+	width: 100%
+	&-block
+		transition: .3s
+		background: $red
+		display: none
+		width: 100%
+		ul
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			height: 70px
+			li
+				width: 150px
+				margin-right: 10px
+				margin-left: 10px
+				transition: .3s
+				text-align: center
+				height: 100%
+				padding-top: 20px
+				a
+					color: #fff
+					font-size: 18px
+					width: 100%
+					height: 100%
+					display: block
+				&:hover
+					background: #fff
+					a
+						color: $red
+		&.active
+			display: block
+.mbl-container
+	position: fixed
+	top: 100px
+	background: #fff
+	padding-top: 45px
+	padding-bottom: 20px
+	height: 100%
+	z-index: -1
+	width: 103%
+	-webkit-transform: translateX(200%)
+	-ms-transform: translateX(200%)
+	transform: translateX(200%)
+	overflow-x: scroll
+	-webkit-transition: .5s
+	-o-transition: .5s
+	transition: .5s
+	&.active
+		transform: translateX(0)
+	.mbl-wrapper
+		display: -webkit-box
+		display: -ms-flexbox
+		display: flex
+		-webkit-box-orient: vertical
+		-webkit-box-direction: normal
+		-ms-flex-direction: column
+		flex-direction: column
+		-webkit-box-align: center
+		-ms-flex-align: center
+		align-items: center
+		height: 1000px
+		overflow-x: scroll
+		&__nav
+			margin-bottom: 15px
+			position: relative
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				transition: .3s
+				top: 13px
+				right: -45px
+				width: 0
+				height: 3px
+				background: $red
+			&.active
+				&:after
+					width: 30px
+			h2
+				padding: 0
+				margin: 0
+				a
+					text-transform: uppercase
+					font-family: prof 
+					color: #000
+		&__content
+			text-align: center
+			margin-bottom: 15px
+			ul li
+				a
+					font-family: prof
+					font-size: 18px
+					color: #000
+.language-mbl
+	ul
+		li
+			display: inline-block
+			a
+				color: #000
+				font-size: 16px
+				&.active
+					color: $red
+.tt-default-nav
+	.navbar-brand
+		padding: 25px
+		padding-left: 15px
+	
+// Creative Section
+#heand
+	width: 24px
+	height: 24px
+.service-tab 
+	.nav-tabs
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: baseline
+	li
+		width: 20%
+		height: 116px
+		a
+			padding: 0
+			width: 100%
+			height: 100%
+			display: block
+			padding-top: 10px
+			svg
+				width: 35px
+				height: 35px
+				transition: .3s
+			span
+				font-size: 13px
+				padding-top: 10px
+		&.active
+			a
+				svg
+					fill: $red			
+		&:hover
+			a
+				svg
+					fill: $red
+.creative-section h2
+	text-transform: uppercase
+.nav-item
+	a 
+		span
+			text-transform: uppercase
+.content-tabs
+	p
+		padding: 0
+		margin: 0
+		span
+			color: $red
+			font-weight: bold 
+	ul
+		padding-left: 20px
+		li:first-child,li
+			display: block
+			border: none
+			width: auto
+			text-align: left
+			position: relative
+			height: auto
+			transition: .3s
+			&:after
+				position: absolute
+				content: '-'
+				left: -10px
+				transition: .3s
+			&:hover
+				color: $red
+				&:after
+					content: '-'
+					left: -15px
+					border-bottom: none
+					width: auto
+.tab-pane
+	.more
+		text-transform: uppercase
+		text-decoration: underline
+		margin-top: 20px
+		display: block
+.tab-form
+	text-align: center
+	position: relative
+	form
+		margin-top: 70px
+		position: relative
+	h2
+		text-align: left
+		text-transform: uppercase
+	.name,.phone,.email,.company
+		position: absolute
+		left: 10px
+		margin-top: 3px
+		transition: .3s
+		color: #a5a3b2
+		top: 0
+		&.active
+			transform: translateY(-35px)
+			font-size: 12px
+			color: $red			
+	.phone
+		top: 73px
+	.email
+		top: 148px
+	.company
+		top: 221px
+	input
+		width: 100%
+		margin-bottom: 40px
+		padding-left: 10px
+		border: none
+		height: 34px
+		border: 1px solid #dcdcdc
+		transition: .3s
+		&#name:focus
+			border: 1px solid $red
+			& ~ .name
+				transform: translateY(-35px)
+				font-size: 12px
+				color: $red
+		&#phone:focus
+			border: 1px solid $red
+			& ~ .phone
+				transform: translateY(-35px)
+				font-size: 12px
+				color: $red
+		&#email:focus
+			border: 1px solid $red
+			& ~ .email
+				transform: translateY(-35px)
+				font-size: 12px
+				color: $red
+		&#company:focus
+			border: 1px solid $red
+			& ~ .company
+				transform: translateY(-35px)
+				font-size: 12px
+				color: $red
+
+	.button
+		min-width: 240px
+		height: 40px
+		span
+			width: 155px
+			&:after
+				content: "\f046"
+				left: -10px
+
+.tc-wrap
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	position: relative
+	margin-left: 45px
+	flex-wrap: wrap
+	.tc-item
+		width: 290px
+		height: 128px
+		display: inline-block
+		position: relative
+		margin-left: -40px
+		vertical-align: top
+		cursor: default
+		-webkit-transition: all .3s ease
+		transition: all .3s ease
+		// &:hover
+		// 	transform: scale(1.08)
+		// 	z-index: 3
+		path
+			fill: #fff !important
+			stroke-opacity: 1!important
+		.tc-content
+			color: $red
+			svg
+				path
+					fill: $red!important
+.tc-content
+	position: absolute
+	color: #fff
+	font-family: prof
+	transition: .3s
+	font-size: 18px
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100%
+	padding: 0 30px
+	margin-top: 20px
+	text-align: center
+	p
+		line-height: 18px
+		margin-top: 20px
+	span
+		font-size: 20px
+	svg
+		width: 40px
+		height: 40px
+		path
+			fill: #fff
+.tc-content-on
+	opacity: 1
+
+#services
+	.row-content
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+.sbox-gutter
+	.service-box
+		svg
+			width: 40px
+			height: 40px	
+			path
+				transition: .5s
+	&:hover
+		.service-box svg
+			path
+				fill: #fff
+.case-study-section
+	padding-top: 50px
+.link-all-service
+	margin-top: 100px
+	text-align: center
+	.button
+		min-width: 240px
+		height: 40px
+		span
+			width: 155px
+			&:after
+				content: "\f03a"
+.candidate-wrap
+	margin-top: 50px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	&__item
+		margin-top: 50px
+		border: 2px solid $red
+		text-align: center
+		background: #fff
+		padding: 30px 0
+		height: 100%
+		position: relative
+		transition: .3s all
+		.image-wrap
+			width: 100%
+			height: 150px
+			text-align: center
+			img
+				height: 100%
+				display: inline-block
+		.description-wrap
+			width: 100%
+			text-align: center
+			margin-top: 30px	
+			h3
+				color: $red
+				margin-top: 50px
+				padding: 0 20px
+		.button
+			width: 240px
+			height: 40px
+			position: absolute
+			bottom: 20px
+			left: 50%
+			transform: translate(-50%)
+			span
+				&:after
+					content: "\f234"
+					left: -35px
+		&:hover
+			background: $red
+			.description-wrap
+				h3
+					color: #fff
+			.button
+				color: $red
+				background: #fff
+.all-candidate
+	margin-top: 150px
+.vacancies-wrap
+	padding-top: 70px
+	.vacancies-item
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		margin-bottom: 30px
+		.image-wrap
+			width: 40%
+			padding: 10px
+			img
+				width: 100%
+				height: 100%
+		.description-wrap
+			width: 70%
+			padding: 10px
+			text-align: center
+			p
+				line-height: 15px
+				font-size: 13px
+				margin: 0
+			.button
+				width: 150px
+				margin-top: 23px
+				span
+					&:after
+						content: "\f112"
+
+// Register&Login
+.register
+	padding: 100px 0
+.register-wrap
+	position: relative
+	min-height: 600px
+	overflow: hidden
+	&__nav
+		width: 100%
+		height: 100px
+		padding-top: 60px
+		background: #fff
+		position: relative
+		z-index: 2
+		nav
+			position: relative
+			ul
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				li
+					display: inline-block
+					text-align: left
+					width: 50%
+					padding-left: 20px
+					&.active
+						a
+							color: $red
+					a
+						font-size: 25px	
+						font-weight: bold
+						color: #000
+						display: block
+						width: 100%
+						height: 100%
+						padding: 5px
+						transition: .3s
+					&.line
+						position: absolute
+						height: 5px
+						width: 50%
+						background: $red
+						bottom: 0
+						left: 0
+						transition: .3s
+						&.second
+							left: 50%
+					&:hover
+						a
+							color: $red
+	&__login,&__register
+		padding-top: 40px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		position: absolute
+		bottom: 110px
+		left: 0
+		transform: translateY(-130%)
+		transition: .5s
+		z-index: 1
+		.form-wrap
+			width: 50%
+			form
+				input
+					width: 100%
+					margin-bottom: 40px
+					padding-left: 15px
+					border: none
+					border: 1px solid #dcdcdc
+					transition: .3s
+					&:focus
+						border: 1px solid $red
+					&#reg-name:focus ~ .name
+						transform: translateY(-35px)
+						font-size: 12px
+						color: $red
+					&#password:focus ~ .password
+						transform: translateY(-35px)
+						font-size: 12px
+						color: $red
+				label
+					position: absolute
+					margin-top: 5px
+					padding-left: 15px
+					transition: .3s				
+					left: 0
+					top: 0
+					&.name
+						top: 37px
+						&.active
+							transform: translateY(-35px)
+							font-size: 12px
+							color: $red
+					&.password
+						top: 108px
+						&.active
+							transform: translateY(-35px)
+							font-size: 12px
+							color: $red
+							
+		.description-wrap
+			padding: 0 25px
+			width: 50%
+			min-height: 300px
+			.description-item
+				background-image: url('../images/image-5.jpg')
+				height: 100%
+				position: relative
+				padding: 10px
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					width: 100%
+					height: 100%
+					left: 0
+					top: 0
+					background: rgba(230,35,36,.8)
+				h2
+					position: relative
+					margin-top: 30px
+					z-index: 5
+					text-align: center
+					color: #fff
+					font-family: prof
+				p
+					position: relative
+					z-index: 5
+					color: #fff
+					font-family: prof
+					line-height: 18px
+					font-size: 16px
+					margin-top: 30px
+					padding: 0 20px
+		&.active
+			transform: translateY(0)
+	&__register
+		.form-wrap
+			form
+				label.name
+					top: -2px
+					&.active
+						transform: translateY(-35px)
+						font-size: 12px
+						color: $red
+				label.email
+					top: 69px
+					&.active
+						transform: translateY(-35px)
+						font-size: 12px
+						color: $red
+				label.password
+					top: 141px
+					&.active
+						transform: translateY(-35px)
+						font-size: 12px
+						color: $red
+.register-wrap__register
+	.description-wrap .description-item
+		background-image: url('../images/image-7.jpg')
+	.form-wrap
+		position: relative
+		text-align: right
+		form
+			input
+				&#register-name:focus ~ .name
+					transform: translateY(-35px)
+					font-size: 12px
+					color: $red
+				&#register-email:focus ~ .email
+					transform: translateY(-35px)
+					font-size: 12px
+					color: $red
+				&#register-password:focus	~ .password
+					transform: translateY(-35px)
+					font-size: 12px
+					color: $red			
+			label
+				left: 0
+		.button
+			width: 160px
+
+ // Service
+
+// 5 problems block
+.problems-block
+	padding-top: 100px
+	background-color: #fafafa
+	border-top: 1px solid #d2d2d2
+	border-bottom: 1px solid #d2d2d2
+.page-title
+	text-align: center
+	margin-top: 50px
+.problems-wrap
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	align-items: baseline
+	width: 100%
+	min-height: 300px
+	.problems-item
+		margin-top: 40px
+		width: 20%
+		&__image
+			height: 90px
+			text-align: center
+			img
+				height: 100%
+				display: inline-block
+				transition: .3s
+				position: relative
+		&__description
+			text-align: center
+			padding: 18px
+			line-height: 19px
+			p
+				font-size: 16px
+				transition: .3s
+		&:hover
+			.problems-item__image
+				img
+					transform: translateY(-10px)
+			.problems-item__description
+				p
+					color: $red
+.choice-wrap
+	text-align: center
+	background-repeat: no-repeat
+	background-size: cover
+	background-position:  center center
+	min-height: 350px
+	position: relative
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-end
+	cursor: pointer
+	&:after
+		content: ''
+		position: absolute
+		display: block
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background: rgba(0,0,0,.6)
+		z-index: 1
+	&:hover
+			.choice-item
+				h2
+					transform: translateY(-120px)
+				p
+					transform: translateY(-95px)
+					opacity: 1
+	&.company
+		background-image: url('../images/image-4.jpg')
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			width: 2px
+			height: 100%
+			background: #fff
+			top: 0
+			right: -1px
+			z-index: 2
+	&.candidate
+		background-image: url('../images/image-1.jpg')
+	.choice-item
+		h2
+			font-family: prof
+			margin-top: 25px
+			color: #fff
+			z-index: 2
+			position: relative
+			text-transform: uppercase
+			font-size: 45px
+			transition: .3s
+		p
+			font-family: prof
+			margin-top: 25px
+			color: #fff
+			z-index: 2
+			position: relative
+			opacity: 0
+			transition: .3s
+.service-contain
+	padding-right: 0
+	padding-left: 0
+.services
+	padding-bottom: 150px
+//  Candidates
+
+.top-candidates
+	padding-top: 100px
+	padding-bottom: 100px
+.search
+	padding-top: 50px
+	width: 100%
+	form
+		width: 100%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		input
+			width: calc(100% - 160px)
+			padding-left: 15px
+			border: none
+			border: 1px solid #d2d2d2
+			height: 30px
+		button
+			width: 140px
+			margin-left: 15px
+			height: 30px
+			span
+				&:after
+					content: "\f002"
+					left: -30px
+.topCandidate-wrap
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	border: 1px solid #d2d2d2
+	padding: 10px
+	transition: .3s
+	margin-top: 50px
+	overflow: hidden
+	&__image
+		width: 300px
+		align-items: middle
+		position: relative
+		img
+			width: 100%
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translate(0,-50%)
+			border-radius: 50%
+	&__descrioption
+		padding: 10px
+		h2
+			font-family: prof
+		h3
+			color: $red
+			font-family: prof
+		p
+			line-height: 18px
+	&__button
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		.button
+			height: 113%
+			position: relative
+			top: 0
+			right: -21px
+			min-width: 140px
+			transform: translateX(110px)
+			translate: .6s
+			transition-timing-function: cubic-bezier(.69,.06,.31,1.49)
+			&:after
+				content: ''
+				position: absolute
+				left: -1px
+				top: 0
+				display: block
+				width: 0
+				height: 0
+				border-top: 100px solid #fff
+				border-right: 50px solid transparent
+				transition: .5s
+			&:before
+				content: ''
+				position: absolute
+				left: -1px
+				bottom: 0
+				display: block
+				width: 0
+				height: 0
+				border-bottom: 100px solid #fff
+				border-right: 50px solid transparent
+				transition: .3s		
+			&:hover
+				background: #af1010
+				color: #fff
+	&:hover
+		box-shadow: 0 2px 5px rgba(0,0,0,.35)
+		.topCandidate-wrap__button
+			.button
+				transform: translateX(0)
+.filter-wrap
+	margin-top: 50px
+	padding-left: 20px
+	padding-right: 20px
+	border: 1px solid #d2d2d2
+	background: #fafafa
+	&__item
+		margin-top: 20px
+		border-bottom: 1px solid #d2d2d2
+		h4
+			position: relative
+			&:after
+				transition: .3s
+				content: ''
+				position: absolute
+				width: 0
+				height: 2px
+				background: $red
+				bottom: -5px
+				left: 0
+		&:hover h4:after
+			width: 20px
+	.item
+		margin-bottom: 20px
+		margin-top: 20px
+		input
+			display: none
+			&:checked + label:before
+				content: "\f00c"
+				font-family: FontAwesome
+				position: absolute
+				top: 0px
+				left: -28px
+				z-index: 2
+				font-size: 12px
+				color: $red
+		label
+			margin: 0
+			position: relative
+			top: -2px
+			left: 30px
+			font-family: prof
+			font-size: 15px
+			font-weight: 100
+			&:after
+				position: absolute
+				content: ""
+				left: -30px
+				top: 7px
+				width: 15px
+				height: 15px
+				border: 1px solid #dde3ea
+				background: #fff
+				border-radius: 50%
+		a
+			text-decoration: underline
+
+// Top Vacancies
+.top-vacancies
+	padding-top: 100px
+	padding-bottom: 100px
+	.topVacancies__wrap
+		margin-top: 50px
+		padding: 10px
+		border: 1px solid #b5b5b5
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		transition: .3s
+		position: relative
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translate(-50%,0)
+			width: 2px	
+			height: 100%
+			background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(184,184,184,1) 52%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 100%)
+		&:hover
+			box-shadow: 0 2px 5px rgba(0,0,0,.35)
+		&__image
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			position: relative
+			width: 50%
+			.image
+				width: 150px
+				img
+					width: 100%
+			.title-company
+				width: calc(100% - 150px)
+				text-align: center
+				h2
+					font-size: 28px
+				.button
+					margin-top: 30px
+					width: 140px
+					span
+						width: 100px
+		&__description
+			width: 50%
+			padding-left: 20px
+			padding-right: 10px
+			padding-top: 10px
+			p
+				line-height: 18px
+.advantage-section.advantage-home
+	background: none
+.counter-wrap
+	font-family: prof
+.contact-section
+	background: url("../images/Main/Images/From Corporate-min.jpg") no-repeat center center;
+	position: relative
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		z-index: 0
+		background-color: rgba(39,1,1,0.9)	
+	.button
+		width: 140px
+		height: 33px
+		display: block
+		span
+			left: 50%
+			&:after
+				display: none
+	.container
+		position: relative
+		z-index: 1
+		.section-title
+			color: #fff
+			span
+				color: $red
+.form-group
+	margin-bottom: 20px
+	input
+		height: 38px
+		padding: 5px
+		border-radius: 5px
+		padding-left: 15px
+.case-study-section
+	.no-padding
+		a.btn
+			height: 30px
+			line-height: 3px
+			position: absolute
+			right: 55px
+			border-radius: 0
+.case-study-left,.case-study-right
+	padding: 60px 40px 100px 110px			
+// Feedback
+.feedback-wrap
+	&__item
+		padding: 20px	
+		.item
+			background: #e0e0e0
+			height: 200px
+			transition: .5s!important
+			padding-top: 30px	
+			padding-left: 20px	
+			padding-right: 20px
+			text-align: center
+			box-shadow: 0 -5px 10px 1px rgba(28,28,28,.1)
+			opacity: .5
+			p
+				color: #40485a
+				line-height: 18px
+			.user	
+				font-weight: bold
+				margin-top: 30px
+				span
+					color: $red
+		&.slick-center
+			.item
+				height: 160px
+				margin-top: 20px
+				box-shadow: 0 0px 40px 10px rgba(28,28,28,.1)
+				opacity: 1
+.slick-prev,.slick-next
+	position: absolute
+	top: 50%
+	transform: translate(0,-50%)
+	z-index: 33
+	height: 100%
+	width: 220px
+	opacity: 0
+.slick-next
+	right: 0
+.footer-section
+	background-color: rgba(39,1,1,1)	
+.section-footer
+	text-align: left
+	.footer-logo
+		padding-right: 50px
+		p
+			font-size: 12px
+			line-height: 15px
+			padding-right: 60px
+		.links
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			li
+				display: inline-block
+				a
+					color: #b5b5b5
+					&:hover
+						color: $red
+	.footer-adress
+		h2
+			color: #fff
+			margin-top: 30px
+			text-transform: uppercase
+		.adress
+			font-size: 12px
+			line-height: 15px
+			padding-top: 10px
+			padding-left: 30px
+			width: 175px
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				top: 25px
+				left: 0
+				width: 20px
+				height: 20px
+				background-image: url('../images/Main/Icons/location.png')
+				background-size: cover
+		.phone
+			font-size: 12px
+			padding-left: 30px
+			position: relative
+			padding-top: 5px
+			&:after
+				content: ''
+				position: absolute
+				top: 10px
+				left: 0
+				width: 20px
+				height: 20px
+				background-image: url('../images/Main/Icons/phone.png')
+				background-size: cover				
+			a
+				color: #d5d5d5
+			&:hover
+				a
+					color: $red
+	.footer-subcribe
+		h2
+			color: #fff
+			margin-top: 30px
+			text-transform: uppercase
+		form
+			margin-top: 35px
+			display: flex
+			align-items: center
+			input
+				height: 30px
+				background: transparent
+				border: none
+				border: 1px solid #b5b5b5 
+				height: 30px
+				padding-left: 15px
+		.copyright
+			margin-top: 70px
+			p
+				font-size: 12px
+		button
+			width: 50px
+			height: 30px
+			background: none
+			border: none
+			background: #b5b5b5
+			position: relative
+			top: 0
+			left: 10px
+			&:after
+				content: ''
+				position: absolute
+				top: 5px
+				left: 15px
+				width: 20px
+				height: 20px
+				background-image: url('../images/Main/Icons/Subscribe.png')
+				background-size: cover
+// News List
+
+.news-list
+	padding-top: 100px
+	padding-bottom: 100px	
+	&__block
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&__block-wrap
+		margin-bottom: 25px
+		width: 49%
+		a
+			display: block
+			font-family: prof
+			transition: .3s all
+			.news-list__image
+				display: block
+				position: relative
+				width: 100%
+				&:after
+					content: ''
+					position: absolute
+					width: 100%
+					top: 0
+					left: 0
+					display: block
+					height: 100%
+					transition: .3s
+				img
+					width: 100%
+			.news-list__description
+				display: block
+				border: 1px solid #ddd
+				transition: .3s
+				padding: 15px
+				h2
+					font-size: 25px
+					transition: .3s
+				p
+					font-family: prof
+					font-size: 14px
+					line-height: 18px
+					height: 72px
+					overflow: hidden
+					color: #000
+					a
+						color: $red
+			&:hover
+				.news-list__description
+					h2
+						color: $red
+				.news-list__image
+					&:after
+						background: rgba(255,42,64,.2)
+.news-list__aside
+	h2
+		margin-top: -5px
+.news-list__aside-wrap
+	border-bottom: 1px solid #ececec
+	a
+		display: block
+		.news-list__aside-image
+			display: block
+			position: relative
+			width: 100%
+			&:after
+				content: ''
+				position: absolute
+				width: 100%
+				top: 0
+				left: 0
+				display: block
+				height: 100%
+				transition: .3s
+			img
+				width: 100%
+		.news-list__aside-description
+			display: block
+			background: #f9f9f9
+			padding: 10px
+			border-top: none
+			position: relative
+			transition: .3s
+			&:before
+				position: absolute
+				content: ''
+				width: 100%
+				height: 0
+				transition: .3s
+				top: 0
+				left: 0
+				background: $red
+				z-index: 1
+			p
+				position: relative
+				z-index: 2
+				line-height: 12px
+				font-size: 12px
+				height: 47px
+				overflow: hidden
+				padding: 0
+				transition: .3s
+				margin: 0
+				color: #000
+		&:hover
+			.news-list__aside-image:after
+				background: rgba(255,42,64,.2)
+			.news-list__aside-description	
+				&:before
+					height: 100%
+				p
+					color: #fff
+.pagination
+	display: block
+	margin-top: 50px
+	ul
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		li
+			display: inline-block
+			font-family: prof
+			font-size: 18px
+			margin: 0 20px
+			&.active
+				font-size: 24px
+				font-weight: 600
+			&.back,&.next
+				min-width: 100px
+				height: 30px
+				background: 0 0
+				border: none
+				background: #e52324
+				color: #fff
+				border: 1px solid #e52324
+				position: relative
+				-webkit-transition: .3s
+				-o-transition: .3s
+				transition: .3s
+				a
+					position: absolute
+					color: #fff
+					z-index: 2
+					top: 50%
+					left: 50%
+					-webkit-transform: translate(-50%,-50%)
+					-ms-transform: translate(-50%,-50%)
+					transform: translate(-50%,-50%)
+					font-weight: 600
+				&:hover
+					background: #fff
+					a
+						color: $red
+// News
+.cramps
+	margin-top: 25px
+	margin-bottom: 25px
+	ul
+		li
+			display: inline-block
+			margin-right: 10px
+			position: relative
+			&:first-child
+				a
+					color: $grey
+					font-weight: 100
+				&:before
+					content: "\f105"
+					font-family: "FontAwesome"
+					position: absolute
+					top: 0px
+					right: -9px
+					font-size: 10px
+					color:  $grey
+			a
+				text-transform: uppercase
+				font-size: 10px
+				font-weight: 700
+
+.news
+	padding:  100px 0
+	&-title
+		padding-left: 20px
+		position: relative
+		margin-bottom: 20px
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			width: 1px
+			height: 100%
+			top: 0
+			left: 0
+			background: $red
+		h3
+			text-transform: uppercase
+			color: $red
+			font-size: 35px
+			line-height: 30px
+			font-family: prof
+			font-weight: 700
+		.date
+			font-family: prof
+			color: #aeb4c1
+	&-wrap
+		&__image
+			width: 100%
+			img
+				max-width: 100%
+		&__description
+			margin-top: 20px
+			h2
+				font-size: 34px
+			p
+				line-height: 18px
+// Blog
+.blog
+	padding-top: 100px
+	padding-bottom: 100px
+	&-wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		&__block
+			border: 1px solid #E7E7E7
+			box-shadow: rgba(0,0,0,.1) 0 2px 5px
+			margin-bottom: 30px
+			flex-basis: 48%
+			a
+				display: block
+				.blog-header
+					height: 140px
+					display: block
+					transition: .3s
+					position: relative
+					background: rgba(229,35,36,.3)
+					&:before
+						content: ''
+						display: block
+						position: absolute
+						bottom: 0
+						left: 36px
+						width: 0
+						height: 0
+						border-left: 20px solid transparent
+						border-right: 20px solid transparent
+						border-bottom: 21px solid #fff
+						z-index: 3
+					.logoFace
+						display: block
+						border: 4px solid #fff
+						border-radius: 50%
+						overflow: hidden
+						width: 70px
+						height: 70px
+						position: absolute
+						top: 50px
+						left: 20px
+						z-index: 3
+						img
+							width: 100%
+				.blog-title
+					padding-top: 20px
+					padding-left: 20px
+					font-size: 28px
+					transition: .3s
+					margin: 0
+			&:first-child
+				flex-basis: 100%
+				.blog-meta
+					flex-direction: row
+					.tags
+						margin-left: 20px
+						ul li
+						 margin: 0 5px
+			&:hover
+				.blog-header
+					background: rgba(229,35,36,1)
+				.blog-title
+					color: $red
+	.blog-meta
+		padding-left: 20px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		margin-top: 20px
+		flex-direction: column
+		.author
+			color: $grey
+			font-size: 14px
+			a
+				display: inline-block
+				font-weight: bold
+		.tags
+			ul li
+				display: inline-block
+				background: #f2f2f2
+				a
+					font-weight: 100
+					color: $grey
+					width: 100%
+					height: 100%
+					display: block
+					padding: 0 15px	
+	.blog-content
+		word-wrap: break-word
+		padding-bottom: 0
+		p
+			line-height: 25px
+	.readMore
+		position: relative
+		left: 20px
+		font-weight: bold
+		color: $red
+		padding-bottom: 10px
+		display: inline-block
+		&:after
+			content: "\f061"
+			position: absolute
+			top: 0
+			font-size: 10px
+			right: -15px
+			font-family: "FontAwesome"
+			transition: .3s
+			transition-timing-function: cubic-bezier(0,.01,.15,1.66)
+		&:hover
+			&:after
+				transform: translateX(10px)
+.sidebar-wrap__item
+	ul
+		li
+			width: 100%
+			background: #f9f9f9
+			border-top: 1px solid $grey
+			padding: 5px 15px
+			transition: .3s
+			&:first-child
+				border-top: none
+				a
+					font-weight: bold
+			a
+				color: #333
+				display: block
+				width: 100%
+				height: 100%
+				transition: color 150ms
+				transition-property: color,transform,text-shadow,-webkit-transform
+			&:hover
+				background: #fff
+				a
+					color: $red
+
+.title-wrap
+	display: flex
+	align-items: baseline
+	padding-left: 20px
+	position: relative
+	margin-bottom: 20px
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 1px
+		height: 100%
+		background: $red
+	h3
+		text-transform: uppercase
+		color: $red
+		font-size: 25px
+		line-height: 30px
+		font-family: prof
+		font-weight: 700
+		margin-left: 20px
+.title-wrap__image
+	width: 64px
+	height: 64px
+	border: 4px solid #fff
+	border-radius: 50%
+	display: inline-block
+	overflow: hidden
+	img
+		width: 100%
+		height: 100%
+.blog-wrap
+	&__image
+		img
+			width: 100%
+	&__description
+		margin-top: 20px
+		p
+			line-height: 18px
+		h2
+			font-size: 34px
+
+// Form create
+.form-container
+	.steps 
+		ul
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			li
+				width: 33%
+				text-align: center
+				border: 1px solid $red
+				border-right: none
+				&.done
+					border: 1px solid #fff
+					background: $red
+					a
+						color: #fff
+				&.current
+					border: 1px solid #fff
+					background: rgba(229,35,36, .8)
+					a
+						color: #fff
+				a
+					display: block
+					width: 100%
+					height: 100%
+					padding: 10px 15px
+					font-size: 13px
+					.current-info
+						display: none
+				&:last-child
+					border-right: 1px solid $red
+.form-register
+	padding-top: 100px
+	padding-bottom: 50px
+	position: relative
+	overflow: hidden
+	.form-item
+		width: 100%
+		background: #f8f8f8
+		padding: 20px
+		input
+			width: 100%
+			padding-left: 20px
+		textarea
+			width: 100%
+			padding-left: 20px
+			resize: none
+		.contact-info
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			flex-wrap: wrap
+			.input-wrap
+				width: 48%
+		.check-box
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+		.input-wrap
+			margin-bottom: 20px
+			margin-top: 10px
+			&.check-item
+				width: 33%
+				padding: 0 10px
+				.item li
+					position: relative
+					text-transform: lowercase
+					input
+						display: none
+					input:checked+label:before
+						content: "\f00c"
+						font-family: FontAwesome
+						position: absolute
+						top: 0
+						left: -28px
+						z-index: 2
+						font-size: 12px
+						color: #e52324
+					label
+						position: relative
+						left: 25px
+						font-weight: 100
+						&:after
+							position: absolute
+							content: ""
+							left: -30px
+							top: 7px
+							width: 15px
+							height: 15px
+							border: 1px solid #dde3ea
+							background: #fff
+							-webkit-border-radius: 50%
+							border-radius: 50%
+
+		.radioButton
+			input
+				width: auto
+				margin-left: 10px
+				position: relative
+				top: 2px
+				&:focus
+					outline: none
+			ul
+				li
+					display: inline-block
+					margin-right: 10px
+.required 
+	&.error
+		border: 1px solid $red
+		animation: error 1s ease infinite alternate
+
+@keyframes error
+	from
+		border: 1px solid $red
+	to
+		border: 1px solid #a9a9a9
+label
+	&.error
+		color: $red
+.actions
+	margin-top: 20px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-end
+	ul
+		li
+			width: 100px
+			display: inline-block
+			text-align: center
+			min-width: 100px
+			height: 30px
+			background: 0 0
+			border: none
+			background: #e52324
+			border: 1px solid #e52324
+			position: relative
+			-webkit-transition: .3s
+			-o-transition: .3s
+			transition: .3s
+			margin-right: 10px
+			a
+				color: #fff
+				width: 100%
+				height: 100%
+				display: block
+				font-weight: 600
+			&:hover
+				border-right: 1px solid $red
+				background: #fff
+				a
+					color: $red
+			&.disabled
+				background: #ddd
+				cursor: none
+				border: 1px solid #ddd
+				a
+					color: #fff
+					&:hover
+						color: #fff
+.two-column
+	width: 45%
+	display: inline-block
+	margin-right: 4%
+	&:last-child
+		margin-right: 0
+.form-sectionTitle
+	position: absolute
+	left: -9999px
+.important
+	color: $red
+	font-size: 15px
+	padding-left: 10px
+.to-form
+	display: block
+	width: 250px
+	margin-top: 70px
+	left: 50%
+	transform: translate(-50%, 0)
+	span
+		left: 50%
+		&:after
+			display: none
+.titleForm label
+	color: $red
+
+
+@import 'responsive'
